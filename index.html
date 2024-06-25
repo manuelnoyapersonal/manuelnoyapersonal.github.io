@@ -18,25 +18,6 @@
             box-sizing: border-box;
         }
 
-        .imagen-container {
-            position: fixed; /* Para mantenerlo fijo en la ventana */
-            top: 20px; /* Margen superior */
-            left: 20px; /* Margen izquierdo */
-            padding: 10px; /* Espaciado interno */
-            z-index: 1000; /* Z-index para asegurar que esté sobre otros elementos */
-            box-sizing: border-box; /* Calcula el tamaño total incluyendo el relleno y el borde */
-            display: none; /* Ocultar inicialmente */
-
-        }
-
-        .imagen-container img {
-            display: block; /* Para evitar espacios innecesarios */
-            width: 160px; /* Ancho máximo de la imagen */
-            height: auto; /* Altura automática proporcional */
-            border-radius: 8px; /* Borde redondeado */
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra ligera */
-        }
-
         .input {
             color: white;
             border: 2px solid #8707ff;
@@ -136,33 +117,33 @@
         }
 
         @media (max-width: 600px) {
-        /* Estilos para pantallas más pequeñas */
-        .card {
-            width: 100%; /* Ancho completo en pantallas pequeñas */
-            height: auto; /* Altura automática */
-            margin: 20px; /* Añadir margen en dispositivos pequeños */
-        }
+            /* Estilos para pantallas más pequeñas */
+            .card {
+                width: 100%; /* Ancho completo en pantallas pequeñas */
+                height: auto; /* Altura automática */
+                margin: 20px; /* Añadir margen en dispositivos pequeños */
+            }
 
-        .bg {
-            width: 100%; /* Ancho completo del fondo */
-            height: 100%; /* Altura completa del fondo */
-            top: 0; /* Ajuste superior */
-            left: 0; /* Ajuste izquierdo */
-        }
+            .bg {
+                width: 100%; /* Ancho completo del fondo */
+                height: 100%; /* Altura completa del fondo */
+                top: 0; /* Ajuste superior */
+                left: 0; /* Ajuste izquierdo */
+            }
 
-        .rules-image {
-            max-width: 100%; /* Ancho máximo para la imagen */
-            margin: 0 auto 20px auto; /* Centrar y añadir margen inferior */
-        }
+            .rules-image {
+                max-width: 100%; /* Ancho máximo para la imagen */
+                margin: 0 auto 20px auto; /* Centrar y añadir margen inferior */
+            }
 
-        .content {
-            padding: 10px; /* Añadir relleno para mejorar legibilidad */
-        }
+            .content {
+                padding: 10px; /* Añadir relleno para mejorar legibilidad */
+            }
 
-        .content .text ul li {
-            margin-bottom: 5px; /* Reducir el espacio entre elementos de la lista */
+            .content .text ul li {
+                margin-bottom: 5px; /* Reducir el espacio entre elementos de la lista */
+            }
         }
-    }
 
         #code-input-section {
             display: flex;
@@ -180,12 +161,11 @@
         }
 
         .rules-image {
-            max-width: 200px;
-            max-height: 200px;
+            max-width: 100px;
+            max-height: 100px;
             margin-right: 20px; /* Espacio entre imagen y texto */
             margin-bottom: 20px; /* Espacio debajo de la imagen */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
         }
 
         /* Estilo para el texto de las normas */
@@ -209,27 +189,24 @@
         <button id="submit-button">Confirmar</button>
         <div id="error-message" class="error-message"></div>
     </div>
-
-    <div id="imagen-container"  class="imagen-container">   
-        <img src="./imagen.png" alt="Imagen de ejemplo" class="rules-image">
-    </div>
     <div id="rules-section" class="card">
         <div class="bg"></div>
         <div class="content">     
             <div class="text">
                 <h2>¡ABRE LA CAJA!</h2>
                 <ul>
-                    <li>----------------------------------------------------------------------------------------------------------------</li>
+                    <li>------------------------------------------</li>
                     <li>1-- No se pueden usar elementos o herramientas que no se encuentren en la caja.</li>
                     <li>[ A menos que sea estrictamente necesario, te darás cuenta cuando así sea. ]</li>
                     <li>2-- Tienes tres pistas que puedes pedir en cualquier momento.</li>
                     <li>3-- No es necesario el uso de fuerza bruta.</li>
                     <li>4-- El tiempo es ilimitado.</li>
-                    <li>----------------------------------------------------------------------------------------------------------------</li>
+                    <li>------------------------------------------</li>
                 </ul>
-                <h2>¡DIME QUE QUIERES EMPEZAR! :):):):):)</h2>
+                <h2>¡DIME QUE QUIERES EMPEZAR!</h2>
                 <ul>
-                    <li>----------------------------------------------------------------------------------------------------------------</li>
+                    <li>------------------------------------------</li>
+                    <li><img src="./imagen.png" class="rules-image"></li>
             </div>
         </div>
     </div>
