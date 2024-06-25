@@ -105,19 +105,15 @@
             box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
         }
 
-
         .bg {
             position: absolute;
-            top: 5px;
-            left: 5px;
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: rgba(255, 255, 255, 0.95); /* Cambiado a un tono más oscuro */
+            background: rgb(255, 255, 255); /* Cambiado a un tono más oscuro */
             backdrop-filter: blur(24px);
             border-radius: 10px;
             overflow: hidden;
-            outline: 2px solid white;
             box-sizing: border-box;
         }
 
@@ -139,26 +135,34 @@
             }
         }
 
-        @media (min-width: 600px) {
-            .card {
-                width: 600px; /* Ancho fijo para pantallas más grandes */
-                height: 500px; /* Altura fija para pantallas más grandes */
-                margin: auto; /* Centrar el contenedor horizontalmente */
-                position: relative; /* Asegurar que la posición sea relativa */
-            }
-
-            .bg {
-                width: calc(100% - 10px); /* Ancho del fondo menos 10px */
-                height: calc(100% - 10px); /* Altura del fondo menos 10px */
-                position: absolute; /* Posición absoluta para ajustar al contenedor padre */
-                top: 5px; /* Ajuste superior */
-                left: 5px; /* Ajuste izquierdo */
-                background-color: #ffffff; /* Color de fondo */
-                opacity: 0.7; /* Opacidad del fondo */
-                z-index: -1; /* Colocar detrás del contenido */
-                border-radius: 10px; /* Bordes redondeados */
-            }
+        @media (max-width: 600px) {
+        /* Estilos para pantallas más pequeñas */
+        .card {
+            width: 100%; /* Ancho completo en pantallas pequeñas */
+            height: auto; /* Altura automática */
+            margin: 20px; /* Añadir margen en dispositivos pequeños */
         }
+
+        .bg {
+            width: 100%; /* Ancho completo del fondo */
+            height: 100%; /* Altura completa del fondo */
+            top: 0; /* Ajuste superior */
+            left: 0; /* Ajuste izquierdo */
+        }
+
+        .rules-image {
+            max-width: 100%; /* Ancho máximo para la imagen */
+            margin: 0 auto 20px auto; /* Centrar y añadir margen inferior */
+        }
+
+        .content {
+            padding: 10px; /* Añadir relleno para mejorar legibilidad */
+        }
+
+        .content .text ul li {
+            margin-bottom: 5px; /* Reducir el espacio entre elementos de la lista */
+        }
+    }
 
         #code-input-section {
             display: flex;
@@ -206,7 +210,6 @@
         <div id="error-message" class="error-message"></div>
     </div>
 
-
     <div id="imagen-container"  class="imagen-container">   
         <img src="./imagen.png" alt="Imagen de ejemplo" class="rules-image">
     </div>
@@ -216,18 +219,17 @@
             <div class="text">
                 <h2>¡ABRE LA CAJA!</h2>
                 <ul>
-                    <li>-----------------------------------------------------------------</li>
+                    <li>----------------------------------------------------------------------------------------------------------------</li>
                     <li>1-- No se pueden usar elementos o herramientas que no se encuentren en la caja.</li>
                     <li>[ A menos que sea estrictamente necesario, te darás cuenta cuando así sea. ]</li>
                     <li>2-- Tienes tres pistas que puedes pedir en cualquier momento.</li>
                     <li>3-- No es necesario el uso de fuerza bruta.</li>
                     <li>4-- El tiempo es ilimitado.</li>
-                    <li>5-- Pasalo bien!</li>
-                    <li>-----------------------------------------------------------------</li>
+                    <li>----------------------------------------------------------------------------------------------------------------</li>
                 </ul>
                 <h2>¡DIME QUE QUIERES EMPEZAR! :):):):):)</h2>
                 <ul>
-                    <li>-----------------------------------------------------------------</li>
+                    <li>----------------------------------------------------------------------------------------------------------------</li>
             </div>
         </div>
     </div>
