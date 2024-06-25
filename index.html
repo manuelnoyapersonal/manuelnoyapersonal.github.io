@@ -89,6 +89,7 @@
         }
 
         .card {
+            margin: auto;
             position: relative;
             width: 90%; /* Responsive width */
             max-width: 600px; /* Larger size */
@@ -140,13 +141,22 @@
 
         @media (min-width: 600px) {
             .card {
-                width: 600px; /* Fixed size for larger screens */
-                height: 500px; /* Fixed size for larger screens */
+                width: 600px; /* Ancho fijo para pantallas más grandes */
+                height: 500px; /* Altura fija para pantallas más grandes */
+                margin: auto; /* Centrar el contenedor horizontalmente */
+                position: relative; /* Asegurar que la posición sea relativa */
             }
 
             .bg {
-                width: calc(100% - 10px);
-                height: calc(100% - 10px);
+                width: calc(100% - 10px); /* Ancho del fondo menos 10px */
+                height: calc(100% - 10px); /* Altura del fondo menos 10px */
+                position: absolute; /* Posición absoluta para ajustar al contenedor padre */
+                top: 5px; /* Ajuste superior */
+                left: 5px; /* Ajuste izquierdo */
+                background-color: #ffffff; /* Color de fondo */
+                opacity: 0.7; /* Opacidad del fondo */
+                z-index: -1; /* Colocar detrás del contenido */
+                border-radius: 10px; /* Bordes redondeados */
             }
         }
 
@@ -162,7 +172,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: #8b0000; /* Color granate para el texto */
+            color: #ff0000; /* Color granate para el texto */
         }
 
         .rules-image {
@@ -212,18 +222,11 @@
                     <li>2-- Tienes tres pistas que puedes pedir en cualquier momento.</li>
                     <li>3-- No es necesario el uso de fuerza bruta.</li>
                     <li>4-- El tiempo es ilimitado.</li>
-                    <li>5-- Pasalo bien!!!</li>
                     <li>----------------------------------------------------------------------------------------------------------------</li>
                 </ul>
                 <h2>¡DIME QUE QUIERES EMPEZAR! :):):):):)</h2>
                 <ul>
                     <li>----------------------------------------------------------------------------------------------------------------</li>
-                </ul>
-                    
-                    
-                    <li></li>
-                    <!-- Añade más normas aquí -->
-                </ul>
             </div>
         </div>
     </div>
