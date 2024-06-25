@@ -185,7 +185,7 @@
 </head>
 <body>
     <div id="code-input-section">
-        <input type="text" id="code-input" class="input" placeholder="Introduce el código">
+        <input type="text" id="code-input" class="input" placeholder="Introduce código (NO NUM)">
         <button id="submit-button">Confirmar</button>
         <div id="error-message" class="error-message"></div>
     </div>
@@ -219,7 +219,7 @@
             var image = document.getElementById('imagen-container');
             var codeInputSection = document.getElementById('code-input-section');
             
-            if (codeInput === '1234') { // Reemplaza '1234' con el código real
+            if (codeInput === 'ocho' || codeInput === 'Ocho' || codeInput === 'OCHO') {
                 codeInputSection.style.display = 'none';
                 rulesSection.style.display = 'flex';
                 errorMessage.textContent = '';
